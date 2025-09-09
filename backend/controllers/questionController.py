@@ -17,13 +17,17 @@ def kaprekar_number(n: int) -> int:
 
 def q1_stream():
     start_time = time.time()
-    for n in range(1000, 3001):
+    found = False
+    for n in range(1, 20):
         candidate = kaprekar_number(n)
         elapsed = round(time.time() - start_time, 2)
-        yield f"data: {{\"current_n\": {n}, \"runtime_seconds\": {elapsed}}}\n\n"
         if gmpy2.is_prime(candidate):
             yield f"data: {{\"found\": true, \"n\": {n}, \"kaprekar_number\": \"{candidate}\", \"runtime_seconds\": {elapsed}}}\n\n"
+            found = True
             break
+    if not found:
+        elapsed = round(time.time() - start_time, 2)
+        yield f"data: {{\"found\": false, \"message\": \"No prime Kaprekar-like number found in the mentioned range\", \"runtime_seconds\": {elapsed}}}\n\n"
 
 # -------- Q2: Repunit primes --------
 def repunit(n):
