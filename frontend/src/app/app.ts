@@ -66,18 +66,20 @@ export class App {
 
 a) A Wieferich prime is a prime p such that p2 is a divisor of 2(P-1) - 1. We only know two Wieferich primes: 1093 and 3511. The crazy thing is that we conjecture that there are infinitely many Wieferich primes... but we only know two of them!
 
-b) Goldbach's conjecture: Every even n > 2 is the sum of two primes. c) The Weak Goldbach Problem: Every odd n > 5 is the sum of three primes.
+b) Goldbach's conjecture: Every even n > 2 is the sum of two primes.
+
+c) The Weak Goldbach Problem: Every odd n > 5 is the sum of three primes.
 
 d) Every even number is the difference of two primes.
 
 e) Legendre's conjecture that there is a prime between consecutive integer squares directly implies that there are at least two primes between prime squares for pn≥3 since pn+1 - pn≥2.
 
-Oppermann's conjecture is that for any integer n greater than 1, there is always a prime number between n(n - 1) and n², and another between n2 and n(n + 1).`,
+f) Oppermann's conjecture is that for any integer n greater than 1, there is always a prime number between n(n - 1) and n², and another between n2 and n(n + 1).`,
       solution: '-',
       endpoint: 'http://127.0.0.1:5000/api/q7',
       stream: false
     }
-  ];
+  ];    
 
   selectedQuestion: any = null;
   result: string = '';

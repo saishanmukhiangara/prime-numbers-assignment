@@ -91,8 +91,6 @@
 .leetcode-right {
 	margin-left: 0;
 }
-	background: none;
-}
 .question-tile {
 	width: 100%;
 	margin-bottom: 0;
@@ -213,6 +211,9 @@ body {
 	background: rgba(236,245,255,0.5);
 	border-radius: 8px;
 	padding: 10px 14px;
+}
+.question-text span {
+	white-space: pre-line;
 }
 .run-btn-row {
 	margin-bottom: 22px;
